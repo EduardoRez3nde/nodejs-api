@@ -1,0 +1,27 @@
+{
+  "name": "nodedj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "build": "tsup src --out-dir build",
+    "start": "node build/server.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "prisma": "6.5.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@fastify/cookie": "11.0.2",
+    "@fastify/jwt": "9.1.0",
+    "@prisma/client": "6.5.0",
+    "@types/bcryptjs": "3.0.0",
+    "bcryptjs": "3.0.2",
+    "dotenv": "16.4.7",
+    "fastify": "5.2.2",
+    "zod": "3.24.2"
+  }
+}
