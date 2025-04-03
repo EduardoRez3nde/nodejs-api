@@ -19,7 +19,7 @@ export class UserService {
                 
         const existEmail: User | null = await this.userRepository.findByEmail(user.email);
 
-        if (existEmail) throw new ResourceAlreadyExistsError("User already exists");
+        if (!existEmail) throw new ResourceAlreadyExistsError("User already exists");
         
         user.password = await hash(user.password, 5);
 
